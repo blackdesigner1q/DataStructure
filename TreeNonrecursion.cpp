@@ -12,14 +12,14 @@ void preorderNonrecursion(BTNode* bt)
 {
 	if (bt != nullptr)
 	{
-		BTNode* Stack[maxSize];//设置栈的大小
+		BTNode* Stack[1];//设置栈的大小
 		BTNode* p;
 		int top = -1;
 		Stack[++top] = bt;//将根节点压入栈中
 		while (top != -1)
 		{
 			p = Stack[top--];//将根节点弹出
-			Visit(p);//访问根节点
+			//Visit(p);//访问根节点
 			if (p->rchild != nullptr)//先将右孩子压入栈中
 			{
 				Stack[++top] = p->rchild;
@@ -40,7 +40,7 @@ void inorderNonrecursion(BTNode* bt)
 	if (bt != nullptr)
 	{
 		BTNode* p;
-		BTNode* Stack[maxsize];
+		BTNode* Stack[1];
 		int pop = -1;
 		p = bt;
 
@@ -48,15 +48,18 @@ void inorderNonrecursion(BTNode* bt)
 		{
 			while (p != nullptr)//将左子树压入栈中
 			{
-				Stack[++p] = p;
+				Stack[++pop] = p;
 				p = p->lchild;
 			}
 			if (pop != -1)//左子树压入完毕后 开始判断其是否存在右子树，存在则压入栈中，不存在就将根节点出栈
 			{
 				p = Stack[pop--];
-				Visit(p);
+				//Visit(p);
 				p = p->rchild;
 			}
 		}
 	}
 }
+/*后序遍历的非递归方法
+先序遍历与逆后序遍历比较类似，唯一不同的地方是先序遍历关于根的左右字树互换即可得到逆后序遍历。
+*/

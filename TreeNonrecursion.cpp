@@ -1,3 +1,8 @@
+#define maxSize 100
+void Visit(BTNode *bt)
+{
+
+}
 /*定义树*/
 typedef struct BTNode {
 	int data;
@@ -63,3 +68,37 @@ void inorderNonrecursion(BTNode* bt)
 /*后序遍历的非递归方法
 先序遍历与逆后序遍历比较类似，唯一不同的地方是先序遍历关于根的左右字树互换即可得到逆后序遍历。
 */
+void postorderNonrecursion(BTNode *bt)
+{
+	if (bt != nullptr)
+	{
+		/*定义两个栈*/
+		BTNode* Stack1[maxSize];
+		int top1 = -1;
+		BTNode* Stack2[maxSize];
+		int top2 = -1;
+		BTNode* p = nullptr; 
+		Stack1[++top1] = bt;
+		while (top1 != -1)
+		{
+			p = Stack1[top1--];
+			Stack2[++top2] = p;//输出改为Stack2
+			/*以下代码与先序遍历的左右孩子进栈次序正好相反*/
+			if (p -> lchild != nullptr)
+			{
+				Stack1[++top1] = p->lchild;//左孩子先入后出 完成左右孩子逆序操作
+			}
+			if (p -> rchild != nullptr)
+			{
+				Stack2[++top2] = p->rchild;
+			}
+			while (top2 != -1)
+			{
+				p = Stack2[top2--];
+				Visit(p);
+			}
+		}
+	}
+
+
+}

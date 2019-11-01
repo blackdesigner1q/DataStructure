@@ -1,14 +1,16 @@
 #define maxSize 100
-void Visit(BTNode *bt)
-{
 
-}
 /*定义树*/
 typedef struct BTNode {
 	int data;
 	BTNode* lchild;
 	BTNode* rchild;
 }BTNode;
+
+void Visit(BTNode* bt)
+{
+
+}
 /*树的先序遍历非递归方式
 构造一个辅助栈，根节点入栈，然后就将根节点出栈，如有左右子树就将右孩子先入栈，然后将左孩子入栈，根据栈的后进先出的原则
 先输出左孩子再输出右孩子

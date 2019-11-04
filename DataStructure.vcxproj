@@ -126,6 +126,10 @@
     <ClCompile Include="test.cpp" />
     <ClCompile Include="threadedBinaryTree.cpp" />
     <ClCompile Include="TreeNonrecursion.cpp" />
+    <ClCompile Include="源.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="C++学习心得.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

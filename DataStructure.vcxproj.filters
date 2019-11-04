@@ -13,16 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\tree">
+      <UniqueIdentifier>{7dfd3483-e6f1-4463-ac3f-d44f07da7cb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\其余">
+      <UniqueIdentifier>{887244c5-ad5f-4d46-99a5-5f103749ea89}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TreeNonrecursion.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="threadedBinaryTree.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="源.cpp">
+      <Filter>源文件\tree</Filter>
     </ClCompile>
+    <ClCompile Include="threadedBinaryTree.cpp">
+      <Filter>源文件\其余</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeNonrecursion.cpp">
+      <Filter>源文件\其余</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="C++学习心得.txt">
+      <Filter>源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>

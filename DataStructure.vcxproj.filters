@@ -24,14 +24,14 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源.cpp">
-      <Filter>源文件\tree</Filter>
-    </ClCompile>
     <ClCompile Include="threadedBinaryTree.cpp">
       <Filter>源文件\其余</Filter>
     </ClCompile>
     <ClCompile Include="TreeNonrecursion.cpp">
       <Filter>源文件\其余</Filter>
+    </ClCompile>
+    <ClCompile Include="1maximum binary tree（654）.cpp">
+      <Filter>源文件\tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
